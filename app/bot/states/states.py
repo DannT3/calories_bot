@@ -10,5 +10,5 @@ class FSMFillUserData(StatesGroup):
     fill_current_weight = State()
     fill_current_hight = State()
     fill_birth_date = State()
+    fill_weight_to_lose = State()
     choose_region = State()
-
