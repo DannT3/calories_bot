@@ -56,7 +56,10 @@ async def process_lose_weight_pressed(callback: CallbackQuery, state: FSMContext
 async def process_weight_to_lose(message: Message, state: FSMContext):
     if not message.text.isdigit():
         message.answer(text="Введите, пожалуйста, вес цифрами.")
-    await message.answer(text="")
+    
+@router.message(StateFilter(FSMFillUserData.choose_gender))
+async def process_gender(message: Message, state: FSMContext):
+    
 
 
 

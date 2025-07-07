@@ -15,8 +15,16 @@ def create_goal_keyboard() -> InlineKeyboardMarkup:
                                      button_gain_weight ]]
     )
 
-    
 
+def create_gender_buttons() -> InlineKeyboardMarkup:
+    male_button = InlineKeyboardButton(text="М",
+                                                                callback_data="male_presse")
+    female_button = InlineKeyboardButton(text="Ж",
+                                                                    callback_data="female pressed")
+    gender_keyboard = InlineKeyboardMarkup(
+    inline_keyboard=[[male_button,
+                                female_button]]
+    )
     
 
 
