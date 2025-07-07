@@ -42,7 +42,7 @@ async def warning_not_name(message: Message):
 @router.message(StateFilter(FSMFillUserData.choose_goal))
 async def process_goal_choosing(message: Message, state: FSMContext):
     await message.answer(text="Выберите цель:",
-                            reply_markup=keyboards.create_goal_keyboard())
+                                        reply_markup=keyboards.create_goal_keyboard)
     
 @router.callback_query(F.data == "lose_weight_pressed")
 async def process_lose_weight_pressed(callback: CallbackQuery, state: FSMContext):
@@ -59,6 +59,12 @@ async def process_weight_to_lose(message: Message, state: FSMContext):
     
 @router.message(StateFilter(FSMFillUserData.choose_gender))
 async def process_gender(message: Message, state: FSMContext):
+    await message.answer(text="Выберите пол",
+                                        reply_markup=keyboards.create_gender_buttons)
+    
+
+    
+
     
 
 
